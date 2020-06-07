@@ -5,7 +5,7 @@ import 'muse-ui/dist/muse-ui.css'
 import App from './App'
 import router from './router'
 
-Vue.use(MuseUI);
+Vue.use(MuseUI)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.config.productionTip = false
