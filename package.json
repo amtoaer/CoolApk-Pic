@@ -51,15 +51,12 @@
     }
   },
   "dependencies": {
-    "ant-design-vue": "^1.6.2",
-    "axios": "^0.18.0",
     "js-md5": "^0.7.3",
-    "request": "^2.88.2",
+    "muse-ui": "^3.0.2",
+    "request-promise": "^4.2.5",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vuex-electron": "^1.0.0"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "ajv": "^6.5.0",
