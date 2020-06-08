@@ -50,7 +50,7 @@
                 const fullPath = path.join(this.basePath, fileName)
                 let stream = fs.createWriteStream(fullPath)
                 request(url).pipe(stream).on('close', () => {
-                    this.message = "保存成功，图片保存为" + fullPath
+                    this.message = fileName+"保存成功!"
                     if (this.timer) {
                         clearTimeout(this.timer)
                     }
