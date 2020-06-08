@@ -1,4 +1,5 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow,ipcMain,dialog } from 'electron'
+
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
@@ -44,6 +45,14 @@ app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
   }
+})
+
+ipcMain.on('openDialog',function(event,p){
+  let result=dialog.showOpenDialog({properties: [p]})
+  if (result) {
+    event.sender.send('selectedItem', result[0])
+  }
+
 })
 
 /**

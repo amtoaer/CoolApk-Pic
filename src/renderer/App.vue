@@ -12,7 +12,7 @@
         </mu-appbar>
         <mu-drawer :open.sync="open" :docked="false" :right="false">
             <mu-list>
-                <mu-list-item @click="changePath()" button>
+                <mu-list-item @click="changePath('index')" button>
                     <mu-list-item-action>
                         <mu-icon value="home"></mu-icon>
                     </mu-list-item-action>
@@ -33,10 +33,10 @@
             }
         },
         methods: {
-            changePath() {
+            changePath(to) {
                 this.open = false
                 this.$router.push({
-                    name: 'index'
+                    name: to
                 })
             }
         }
